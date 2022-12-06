@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/CambodiaBusinessProject/static/css/main.7579a81a.css",
+    "main.js": "/CambodiaBusinessProject/static/js/main.78ab9099.js",
+    "static/media/1.png": "/CambodiaBusinessProject/static/media/1.514dc5ee17dff8832ef1.png",
+    "index.html": "/CambodiaBusinessProject/index.html",
+    "main.7579a81a.css.map": "/CambodiaBusinessProject/static/css/main.7579a81a.css.map",
+    "main.78ab9099.js.map": "/CambodiaBusinessProject/static/js/main.78ab9099.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7579a81a.css",
+    "static/js/main.78ab9099.js"
+  ]
+}
