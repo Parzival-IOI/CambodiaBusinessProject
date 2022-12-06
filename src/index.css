@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+:root {
+  --bg-d1: #c3ceda;
+  --bg-d2: #738fa7;
+  --bg-d3: #0c4160;
+  --bg-d4: #071330;
+  --bg-l1: #e4f4f3;
+  --bg-l2: #a1dbf1;
+  --bg-l3: #71d5e4;
+  --bg-l4: #00b6bc;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+body #root {
+  width: 100%;
+  min-height: 120vh;
+  position: relative;
+  z-index: 1;
+}
+body #root .nav {
+  font-family: "Nerko One", cursive;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 6vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-d3);
+  transition: background-color 500ms, top 1s;
+}
+body #root .nav.trans {
+  background-color: transparent;
+}
+body #root .nav .Link {
+  padding: 0.6vw 1vw 0.6vw 1vw;
+  background-color: var(--bg-d2);
+  color: var(--bg-d4);
+  border-radius: 0.5vw;
+  margin-right: 1vw;
+  text-decoration: none;
+}
+body #root .nav .Link:first-child {
+  margin: 0 auto 0 2vw;
+  border-radius: 0;
+}
+body #root .nav .Link:last-child {
+  margin-right: 2vw;
+}/*# sourceMappingURL=index.css.map */
