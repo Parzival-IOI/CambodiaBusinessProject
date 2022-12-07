@@ -35,10 +35,11 @@ body #root .nav {
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  transition: background-color 500ms, top 1s;
+  transition: background-color 1s, top 1.5s;
 }
 body #root .nav.active {
   background-color: var(--bg-d3);
+  transition: background-color 2s, top 21.5;
 }
 body #root .nav.active.top-20 {
   top: -20vw;
@@ -46,9 +47,12 @@ body #root .nav.active.top-20 {
 body #root .nav.active.top-0 {
   top: 0;
 }
+body #root .nav.active .Link {
+  background-color: var(--bg-d2);
+}
 body #root .nav .Link {
   padding: 0.6vw 1vw 0.6vw 1vw;
-  background-color: var(--bg-d2);
+  background-color: transparent;
   color: var(--bg-d4);
   border-radius: 0.5vw;
   margin-right: 1vw;
@@ -64,12 +68,16 @@ body #root .nav .Link:last-child {
 body #root div .Parallax {
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: 100vh;
+  min-width: 100%;
+  height: 50vw;
+  overflow: hidden;
 }
 body #root div .Parallax img {
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: var(--i--n);
+}
+body #root div .Parallax img #blend {
+  mix-blend-mode: screen;
 }/*# sourceMappingURL=index.css.map */

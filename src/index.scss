@@ -34,19 +34,23 @@ body {
             justify-content: center;
             align-items: center;
             background-color: transparent;
-            transition: background-color 500ms, top 1s;
+            transition: background-color 1s, top 1.5s;
             &.active {
                 background-color: var(--bg-d3);
+                transition: background-color 2s, top 21.5;
                 &.top-20 {
                     top: -20vw;
                 }
                 &.top-0 {
                     top: 0;
                 }
+                .Link {
+                    background-color: var(--bg-d2);
+                }
             }
             .Link {
                 padding: 0.6vw 1vw 0.6vw 1vw;
-                background-color: var(--bg-d2);
+                background-color: transparent;
                 color: var(--bg-d4);
                 border-radius: 0.5vw;
                 margin-right: 1vw;
@@ -64,14 +68,17 @@ body {
             .Parallax {
                 position: relative;
                 z-index: 1;
-                width: 100%;
-                height: 100vh;
-                
+                min-width: 100%;
+                height: 50vw;
+                overflow: hidden;
                 img {
                     width: 100%;
                     height: 100%;
                     position: absolute;
                     z-index: var(--i--n);
+                    #blend {
+                        mix-blend-mode: screen;
+                    }
                 }
             }
         }
