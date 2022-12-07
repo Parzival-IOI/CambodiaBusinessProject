@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CambodiaBusinessProject/static/css/main.476e3126.css",
-    "main.js": "/CambodiaBusinessProject/static/js/main.78ab9099.js",
+    "main.js": "/CambodiaBusinessProject/static/js/main.f7524e6b.js",
     "static/media/1.png": "/CambodiaBusinessProject/static/media/1.514dc5ee17dff8832ef1.png",
     "index.html": "/CambodiaBusinessProject/index.html",
     "main.476e3126.css.map": "/CambodiaBusinessProject/static/css/main.476e3126.css.map",
-    "main.78ab9099.js.map": "/CambodiaBusinessProject/static/js/main.78ab9099.js.map"
+    "main.f7524e6b.js.map": "/CambodiaBusinessProject/static/js/main.f7524e6b.js.map"
   },
   "entrypoints": [
     "static/css/main.476e3126.css",
-    "static/js/main.78ab9099.js"
+    "static/js/main.f7524e6b.js"
   ]
 }
