@@ -34,11 +34,17 @@ body #root .nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-d3);
+  background-color: transparent;
   transition: background-color 500ms, top 1s;
 }
-body #root .nav.trans {
-  background-color: transparent;
+body #root .nav.active {
+  background-color: var(--bg-d3);
+}
+body #root .nav.active.top-20 {
+  top: -20vw;
+}
+body #root .nav.active.top-0 {
+  top: 0;
 }
 body #root .nav .Link {
   padding: 0.6vw 1vw 0.6vw 1vw;
@@ -65,5 +71,5 @@ body #root div .Parallax img {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: var(--i--n);
 }/*# sourceMappingURL=index.css.map */
