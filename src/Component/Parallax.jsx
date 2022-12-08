@@ -27,6 +27,8 @@ function Parallax() {
     setPosition(Scroll);
   },[Scroll])
 
+  console.log(position)
+
 
 
   return (
