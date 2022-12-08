@@ -9,7 +9,7 @@
 
     --bg-l1 : #e4f4f3;
     --bg-l2 : #a1dbf1;
-    --bg-l3 : #71d5e4;
+    --bg-l3 : #71d5e4ab;
     --bg-l4 : #00b6bc;
 }
 
@@ -46,7 +46,22 @@ body {
                 }
                 .Link {
                     background-color: var(--bg-d2);
+                    transition: background-color 200ms, box-shadow 200ms;
+                    &:hover {
+                        background-color: var(--bg-d1);
+                        box-shadow: 0 0 0.5vw 0.2vw var(--bg-d2);
+                    }
                 }
+            }
+            .Home {
+                padding: 0.6vw 1vw 0.6vw 1vw;
+                background-color: transparent;
+                color: var(--bg-d4);
+                border-radius: 0.5vw;
+                text-decoration: none;
+                transition: background-color 200ms;
+                margin: 0 auto 0 2vw;
+                border-radius: 0;
             }
             .Link {
                 padding: 0.6vw 1vw 0.6vw 1vw;
@@ -55,13 +70,16 @@ body {
                 border-radius: 0.5vw;
                 margin-right: 1vw;
                 text-decoration: none;
-                &:first-child {
-                    margin: 0 auto 0 2vw;
-                    border-radius: 0;
-                }
+                transition: background-color 200ms;
                 &:last-child {
                     margin-right: 2vw;
                 }
+                &:hover {
+                    background-color: var(--bg-l3);
+                }
+            }
+            .Toggle {
+                display: none;
             }
         }
         div {
@@ -71,10 +89,13 @@ body {
                 min-width: 100%;
                 height: 50vw;
                 overflow: hidden;
-                img {
+                background-color: var(--bg-d3);
+                .img {
                     width: 100%;
                     height: 100%;
                     position: absolute;
+                    top: 0;
+                    left: 0;
                     z-index: var(--i--n);
                     #blend {
                         mix-blend-mode: screen;
@@ -84,3 +105,34 @@ body {
         }
     }
 }
+
+
+// @media (max-width: 1399.98px) { ... }
+
+// @media (max-width: 1199.98px) { ... }
+
+// @media (max-width: 991.98px) { ... }
+
+
+
+@media (max-width: 767.98px) {
+    body {
+        #root {
+            .nav {
+                height: 5rem;
+                .Link {
+                    display: none;
+                }
+                .Toggle {
+                    display: block;
+                    width: 1rem;
+                    height: 1rem;
+                    margin-right: 2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// @media (max-width: 575.98px) { ... }

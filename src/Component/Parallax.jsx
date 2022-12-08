@@ -1,16 +1,14 @@
 import {React, useEffect, useState} from 'react'
-import P1 from '../Asset/1.png'
-import P2 from '../Asset/2.png'
-import P3 from '../Asset/3.png'
-import P4 from '../Asset/4.png'
-import P5 from '../Asset/5.png'
-import P6 from '../Asset/6.png'
-import P7 from '../Asset/7.png'
-import P8 from '../Asset/8.png'
-import P9 from '../Asset/9.png'
-import P10 from '../Asset/10.png'
-import P11 from '../Asset/11.png'
-import P12 from '../Asset/12.png'
+import {LazyLoadImage} from 'react-lazy-load-image-component'
+import Riff1 from '../Asset/1Riff.png'
+import Riff2 from '../Asset/2Riff.png'
+import Riff3 from '../Asset/3Riff.png'
+import AFish from '../Asset/AFish.png'
+import BFish from '../Asset/BFish.png'
+import Fish from '../Asset/Fish.png'
+import BackRiff from '../Asset/BackRiff.png'
+import Turtle from '../Asset/Turtle.png'
+import PH from '../Asset/PH.png'
 
 import useScroll from '../Hook/useScroll'
 
@@ -33,18 +31,14 @@ function Parallax() {
 
   return (
     <div className='Parallax'>
-      <img src={P1} alt="P1" style={{'--i--n' : '17'}}/>
-      <img src={P2} alt="P2" style={{'--i--n' : '15'}}/>
-      <img src={P3} alt="P3" style={{'--i--n' : '14'}}/>
-      <img src={P4} alt="P4" style={{'--i--n' : '12'}}/>
-      <img src={P5} alt="P5" style={{'--i--n' : '10'}}/>
-      <img src={P6} alt="P6" style={{'--i--n' : '8'}}/>
-      <img src={P7} alt="P7" style={{'--i--n' : '6'}}/>
-      <img src={P8} alt="P8" style={{'--i--n' : '9'}}/>
-      <img src={P9} alt="P9" style={{'--i--n' : '7'}}/>
-      <img src={P10} alt="P10" style={{'--i--n' : '11'}}/>
-      <img src={P11} alt="P11" style={{'--i--n' : '16'}}/>
-      <img src={P12} alt="P12" style={{'--i--n' : '13'}}/>
+      <LazyLoadImage className='img' src={Riff1} alt="P1" style={{'--i--n' : '8'}} placeholderSrc={PH}/>
+      <LazyLoadImage className='img' src={Riff2} alt="P2" style={{'--i--n' : '5'}}/>
+      <LazyLoadImage className='img' src={Riff3} alt="P3" style={{'--i--n' : '3'}}/>
+      <LazyLoadImage className='img' src={AFish} alt="P4" style={{'--i--n' : '6'}}/>
+      <LazyLoadImage className='img' src={BFish} alt="P5" style={{'--i--n' : '7'}}/>
+      <LazyLoadImage className='img' src={Fish} alt="P6" style={{'--i--n' : '4'}}/>
+      <LazyLoadImage className='img' src={BackRiff} alt="P7" style={{'--i--n' : '1'}}/>
+      <LazyLoadImage className='img' src={Turtle} alt="P9" style={{'--i--n' : '2'}}/>
     </div>
   )
 }
