@@ -33,10 +33,10 @@ function Layout() {
   return (
     <>
         <nav className={NavChanges()} >
-            <Link to="/" className='Link'>Home</Link>
+            <Link to="/Portfolio/" className='Link'>Home</Link>
             <div className="Link">Something</div>
             <div className="Link">Something Else</div>
-            <Link to="/Programming" className='Link'>Programing</Link>
+            <Link to="/Portfolio/Programming" className='Link'>Programing</Link>
         </nav>
         <Outlet></Outlet>
     </>
