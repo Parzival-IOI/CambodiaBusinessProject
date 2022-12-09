@@ -32,13 +32,13 @@ function Parallax() {
   return (
     <div className='Parallax'>
       <LazyLoadImage className='img' src={Riff1} alt="P1" style={{'--i--n' : '8'}} placeholderSrc={PH}/>
-      <LazyLoadImage className='img' src={Riff2} alt="P2" style={{'--i--n' : '5'}}/>
-      <LazyLoadImage className='img' src={Riff3} alt="P3" style={{'--i--n' : '3'}}/>
-      <LazyLoadImage className='img' src={AFish} alt="P4" style={{'--i--n' : '6'}}/>
-      <LazyLoadImage className='img' src={BFish} alt="P5" style={{'--i--n' : '7'}}/>
-      <LazyLoadImage className='img' src={Fish} alt="P6" style={{'--i--n' : '4'}}/>
-      <LazyLoadImage className='img' src={BackRiff} alt="P7" style={{'--i--n' : '1'}}/>
-      <LazyLoadImage className='img' src={Turtle} alt="P9" style={{'--i--n' : '2'}}/>
+      <LazyLoadImage className='img' src={Riff2} alt="P2" style={{'--i--n' : '5'}} placeholderSrc={PH}/>
+      <LazyLoadImage className='img' src={Riff3} alt="P3" style={{'--i--n' : '3'}} placeholderSrc={PH}/>
+      <LazyLoadImage className='img' src={AFish} alt="P4" style={{'--i--n' : '6'}} placeholderSrc={PH}/>
+      <LazyLoadImage className='img' src={BFish} alt="P5" style={{'--i--n' : '7'}} placeholderSrc={PH}/>
+      <LazyLoadImage className='img' src={Fish} alt="P6" style={{'--i--n' : '4'}} placeholderSrc={PH}/>
+      <LazyLoadImage className='img' src={BackRiff} alt="P7" style={{'--i--n' : '1'}} placeholderSrc={PH}/>
+      <LazyLoadImage className='img' src={Turtle} alt="P9" style={{'--i--n' : '2'}} placeholderSrc={PH}/>
     </div>
   )
 }

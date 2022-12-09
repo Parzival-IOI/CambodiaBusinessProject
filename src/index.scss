@@ -17,6 +17,7 @@ body {
     width: 100%;
     min-height: 100vh;
     margin: 0;
+    overflow: scroll;
     #root {
         width: 100%;
         min-height: 120vh;
@@ -82,6 +83,12 @@ body {
                 display: none;
             }
         }
+        .BackDrop {
+            display: none;
+        }
+        .MobileNav {
+            display: none;
+        }
         div {
             .Parallax {
                 position: relative;
@@ -119,7 +126,10 @@ body {
     body {
         #root {
             .nav {
-                height: 5rem;
+                height: 4.5rem;
+                .Home {
+                    font-size: 1.4rem;
+                }
                 .Link {
                     display: none;
                 }
@@ -127,8 +137,69 @@ body {
                     display: block;
                     width: 1rem;
                     height: 1rem;
-                    margin-right: 2rem;
+                    margin-right: 2.5rem;
                     cursor: pointer;
+                }
+
+            }
+            .BackDrop {
+                display: block;
+                position: absolute;
+                z-index: 19;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(5, 5, 46, 0.54);
+            }
+            .MobileNav {
+                display: grid;
+                place-items: center;
+                position: absolute;
+                z-index: 20;
+                top: 0;
+                right: -80vw;
+                width: 65%;
+                height: 100vh;
+                background-color: var(--bg-d2);
+                transition: right 1s;
+                animation-name: travel;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                .SideBar {
+                    width: 100%;
+                    height: 50%;
+                    display: flex; 
+                    justify-content: space-evenly;
+                    align-items: center;
+                    flex-flow: column nowrap;
+                    a {
+                        font-family: 'Roboto Slab', serif;
+                        font-weight: 600;
+                        padding: .6rem 1.5rem;
+                        background-color: var(--bg-l3);
+                        border-radius: .5rem;
+                        transition: background-color 500ms, color 700ms;
+                        text-decoration: none;
+                        color: var(--bg-d4);
+                        &:hover {
+                            background-color: var(--bg-d4);
+                            color: var(--bg-d1);
+                        }
+                    }
+                }
+                .Travel1 {
+                    animation-name: travel;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
+                }
+                .Travel1 {
+                    animation-name: travel;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    animation-iteration-count: 1;
                 }
             }
         }
@@ -136,3 +207,11 @@ body {
 }
 
 // @media (max-width: 575.98px) { ... }
+
+@keyframes travel {
+    from {
+        right: -80vw;
+    }to {
+        right: 0;
+    }
+}
