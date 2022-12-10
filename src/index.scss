@@ -36,7 +36,7 @@ body {
             align-items: center;
             background-color: transparent;
             transition: background-color 1s, top 1.5s;
-            &.active {
+            &.activeNav {
                 background-color: var(--bg-d3);
                 transition: background-color 2s, top 21.5;
                 &.top-20 {
@@ -49,20 +49,23 @@ body {
                     background-color: var(--bg-d2);
                     transition: background-color 200ms, box-shadow 200ms;
                     &:hover {
-                        background-color: var(--bg-d1);
-                        box-shadow: 0 0 0.5vw 0.2vw var(--bg-d2);
+                        background-color: var(--bg-l1);
+                        box-shadow: 0 0 0.5vw 0.2vw var(--bg-l2);
                     }
+                }
+                .active {
+                    background-color: var(--bg-l1);
+                    box-shadow: 0 0 0.5vw 0.2vw var(--bg-l2);
+                    background-color: var(--bg-d1);
+                        box-shadow: 0 0 0.5vw 0.2vw var(--bg-d2);
                 }
             }
             .Home {
-                padding: 0.6vw 1vw 0.6vw 1vw;
-                background-color: transparent;
-                color: var(--bg-d4);
-                border-radius: 0.5vw;
-                text-decoration: none;
-                transition: background-color 200ms;
-                margin: 0 auto 0 2vw;
-                border-radius: 0;
+                width: 3.5vw;
+                height: 3.5vw;
+                margin: 0 auto 0 3vw;
+                border-radius: 50%;
+                overflow: hidden;
             }
             .Link {
                 padding: 0.6vw 1vw 0.6vw 1vw;
@@ -77,6 +80,13 @@ body {
                 }
                 &:hover {
                     background-color: var(--bg-l3);
+                }
+                
+            }
+            .active {
+                background-color: var(--bg-l4);
+                &:first-child {
+                    box-shadow: 0 0 0.5vw 0.2vw var(--bg-l2);
                 }
             }
             .Toggle {
@@ -124,14 +134,22 @@ body {
 
 @media (max-width: 767.98px) {
     body {
+        
         #root {
+            overflow-x: hidden;
             .nav {
                 height: 4.5rem;
                 .Home {
-                    font-size: 1.4rem;
+                    width: 2rem;
+                    height: 2rem;
                 }
                 .Link {
                     display: none;
+                }
+                .active {
+                    &:first-child {
+                        box-shadow: 0 0 0.5rem 0.2rem var(--bg-l2);
+                    }
                 }
                 .Toggle {
                     display: block;
@@ -144,29 +162,26 @@ body {
             }
             .BackDrop {
                 display: block;
-                position: absolute;
+                position: fixed;
                 z-index: 19;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100vh;
                 background-color: rgba(5, 5, 46, 0.54);
+                transition: all 1s;
             }
             .MobileNav {
                 display: grid;
                 place-items: center;
-                position: absolute;
-                z-index: 20;
+                position: fixed;
+                z-index: 99;
                 top: 0;
                 right: -80vw;
                 width: 65%;
                 height: 100vh;
                 background-color: var(--bg-d2);
                 transition: right 1s;
-                animation-name: travel;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    animation-iteration-count: 1;
                 .SideBar {
                     width: 100%;
                     height: 50%;
@@ -174,7 +189,9 @@ body {
                     justify-content: space-evenly;
                     align-items: center;
                     flex-flow: column nowrap;
+                    z-index: 1;
                     a {
+                        z-index: 1;
                         font-family: 'Roboto Slab', serif;
                         font-weight: 600;
                         padding: .6rem 1.5rem;
@@ -184,22 +201,14 @@ body {
                         text-decoration: none;
                         color: var(--bg-d4);
                         &:hover {
-                            background-color: var(--bg-d4);
+                            background-color: var(--bg-d3);
                             color: var(--bg-d1);
                         }
                     }
-                }
-                .Travel1 {
-                    animation-name: travel;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    animation-iteration-count: 1;
-                }
-                .Travel1 {
-                    animation-name: travel;
-                    animation-duration: 1s;
-                    animation-fill-mode: forwards;
-                    animation-iteration-count: 1;
+                    .active {
+                        background-color: var(--bg-d4);
+                        color: var(--bg-d1);
+                    }
                 }
             }
         }
@@ -208,10 +217,3 @@ body {
 
 // @media (max-width: 575.98px) { ... }
 
-@keyframes travel {
-    from {
-        right: -80vw;
-    }to {
-        right: 0;
-    }
-}

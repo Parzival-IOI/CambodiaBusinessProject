@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react'
 import { useRef } from 'react';
-import {Outlet, Link} from 'react-router-dom'
-import MobileNavBar from '../Component/MobileNavBar';
+import {Outlet, NavLink} from 'react-router-dom'
 import useScroll from '../Hook/useScroll'
+import Profile1 from '../Asset/Profile.jpg'
 
 function Layout() {
   const [position, setPosition] = useState(0);
@@ -24,10 +24,10 @@ function Layout() {
     }
     else if(position > 50){
       if(position > prev.current) {
-        return 'nav active top-20'
+        return 'nav activeNav top-20'
       }
       else if(position <= prev.current) {
-        return 'nav active top-0'
+        return 'nav activeNav top-0'
       }
     }
     return 'nav'
@@ -43,13 +43,15 @@ function Layout() {
     document.body.style.overflow = "scroll";
   }
 
+
+
   return (
     <>
-        <nav className={NavChanges()} >
-            <Link to="/Portfolio/" className='Home'>Home</Link>
-            <div className="Link">Something</div>
-            <Link to="/Portfolio/Programming" className='Link'>Programing</Link>
-            <div className="Link">Something Else</div>
+        <nav className={NavChanges()} style={toggle ? {'backgroundColor' : 'transparent'} : null}>
+            <NavLink to="/Portfolio/" className='Home'><img src={Profile1} alt="Profile" width='100%' height='100%' loading='lazy'/></NavLink>
+            <NavLink to='/Portfolio/About' className="Link">About</NavLink>
+            <NavLink to="/Portfolio/Contact" className="Link">Contact</NavLink>
+            <NavLink to="/Portfolio/Programming" className='Link'>Programing</NavLink>
             {toggle ? 
             <div className='Toggle' onClick={DoToggle}>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
@@ -63,8 +65,25 @@ function Layout() {
               </svg>
             </div>}
         </nav>
-        {toggle && <div className='BackDrop' onClick={DoToggle}></div>}
-        {toggle && <MobileNavBar toggle={toggle}/>}
+        {toggle && <div className='BackDrop' onClick={DoToggle} ></div>}
+        {toggle ? 
+        <div className='MobileNav' style={{'right' : '0vw'}}>
+          <div className='SideBar'>
+            <NavLink to='/Portfolio/' className="Link">Home</NavLink>
+            <NavLink to='/Portfolio/About' className="Link">About</NavLink>
+            <NavLink to="/Portfolio/Contact" className="Link">Contact</NavLink>
+            <NavLink to='/Portfolio/Program' className="Link">Program</NavLink>
+          </div>
+        </div> 
+        : 
+        <div className='MobileNav' style={{'right' : '-80vw'}} id='slider'>
+          <div className='SideBar'>
+            <NavLink to='/Portfolio/' className="Link">Home</NavLink>
+            <NavLink to='/Portfolio/About' className="Link">About</NavLink>
+            <NavLink to="/Portfolio/Contact" className="Link">Contact</NavLink>
+            <NavLink to='/Portfolio/Program' className="Link">Program</NavLink>
+          </div>
+        </div>}
         <Outlet></Outlet>
     </>
   )
