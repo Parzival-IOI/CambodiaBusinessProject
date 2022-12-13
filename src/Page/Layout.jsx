@@ -11,6 +11,10 @@ function Layout() {
 
   const [toggle, setToggle] = useState(false);
   
+  const ref = useRef(null);
+
+  const [width, setWidth] = useState(null);
+
   useEffect(()=> {
       setPosition(Scroll);
   }, [Scroll])
@@ -43,24 +47,35 @@ function Layout() {
     document.body.style.overflow = "scroll";
   }
 
+  
 
+  useEffect(()=>{
+    function GetWidth() {
+      setWidth(ref.current.offsetWidth);
+    }
+    window.addEventListener('resize', GetWidth);
+    return ()=> {return (window.removeEventListener('resize', GetWidth))}
+  }, []);
+  if(width > 767) {
+    document.body.style.overflow = "scroll";
+  }
 
   return (
     <>
-        <nav className={NavChanges()} style={toggle ? {'backgroundColor' : 'transparent'} : null}>
-            <NavLink to="/Portfolio/" className='Home'><img src={Profile1} alt="Profile" width='100%' height='100%' loading='lazy'/></NavLink>
+        <nav className={NavChanges()} style={toggle ? {'backgroundColor' : 'transparent'} : null} ref={ref}>
+            <NavLink to="/Portfolio/" className={`Home ${isActive => {return isActive ? 'active' : null}}`}><img src={Profile1} alt="Profile" width='100%' height='100%' loading='lazy'/></NavLink>
             <NavLink to='/Portfolio/About' className="Link">About</NavLink>
             <NavLink to="/Portfolio/Contact" className="Link">Contact</NavLink>
             <NavLink to="/Portfolio/Programming" className='Link'>Programing</NavLink>
             {toggle ? 
             <div className='Toggle' onClick={DoToggle}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
                 <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
               </svg>
             </div>
             : 
             <div className='Toggle' onClick={DoToggle}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-x-diamond-fill" viewBox="0 0 16 16">
                 <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z"/>
               </svg>
             </div>}

@@ -1,13 +1,14 @@
-import React from 'react'
-import Parallax from '../Component/Parallax'
+import React from "react";
+import MainContent from "../Component/MainContent/MainContent";
+import Parallax from "../Component/Parallax/Parallax";
 
 function Main() {
-  return (
-    <div>
-      <Parallax></Parallax>
-
-    </div>
-  )
+    return (
+        <div>
+            <Parallax></Parallax>
+            <MainContent></MainContent>
+        </div>
+    );
 }
 
-export default Main
+export default Main;
