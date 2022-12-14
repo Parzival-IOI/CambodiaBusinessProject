@@ -23,10 +23,10 @@ function Layout() {
   },[position]);
 
   function NavChanges () {
-    if(position <= 50) {
+    if(position <= 100) {
       return 'nav';
     }
-    else if(position > 50){
+    else if(position > 100){
       if(position > prev.current) {
         return 'nav activeNav top-20'
       }

@@ -9,6 +9,7 @@ import Fish from "../../Asset/Fish.png";
 import BackRiff from "../../Asset/BackRiff.png";
 import Turtle from "../../Asset/Turtle.png";
 import PH from "../../Asset/PH.png";
+import "./Parallax.css"
 
 import useScroll from "../../Hook/useScroll";
 
@@ -20,8 +21,6 @@ function Parallax() {
         setPosition(Scroll);
     }, [Scroll]);
 
-    console.log(position);
-
     return (
         <div className="Parallax">
             <img src={PH} alt="P." />
@@ -29,49 +28,49 @@ function Parallax() {
                 className="img"
                 src={Riff1}
                 alt="P."
-                style={{ "--i--n": "8" }}
+                style={{ "--i--n": "8", 'top' : `${(position)*0.15}px`}}
             />
             <LazyLoadImage
                 className="img"
                 src={Riff2}
                 alt="P.."
-                style={{ "--i--n": "5" }}
+                style={{ "--i--n": "5" , 'top' : `${position*0.4}px` , 'left' : `-${position*0.08}px`}}
             />
             <LazyLoadImage
                 className="img"
                 src={Riff3}
                 alt="P..."
-                style={{ "--i--n": "3" }}
+                style={{ "--i--n": "3" , 'top' : `${position*0.4 }px`}}
             />
             <LazyLoadImage
                 className="img"
                 src={AFish}
                 alt="P...."
-                style={{ "--i--n": "6" }}
+                style={{ "--i--n": "6" , 'top' : `${position*0.1 }px`, 'left' : `-${position*0.3}px`}}
             />
             <LazyLoadImage
                 className="img"
                 src={BFish}
                 alt="P....."
-                style={{ "--i--n": "7" }}
+                style={{ "--i--n": "7" , 'top' : `${position*0.3 }px`, 'left' : `${position*0.6}px`}}
             />
             <LazyLoadImage
                 className="img"
                 src={Fish}
                 alt="P......"
-                style={{ "--i--n": "4" }}
+                style={{ "--i--n": "4" , 'top' : `${position*0.01 }px`, 'left' : `${position*0.08}px`}}
             />
             <LazyLoadImage
                 className="img"
                 src={BackRiff}
                 alt="P......."
-                style={{ "--i--n": "1" }}
+                style={{ "--i--n": "1" , top : `${position*0.3}px`}}
             />
             <LazyLoadImage
                 className="img"
                 src={Turtle}
                 alt="P........."
-                style={{ "--i--n": "2" }}
+                style={{ "--i--n": "2" , left : `${position*1.5}px`, top : `${position*0.2}px`}}
             />
         </div>
     );
