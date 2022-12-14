@@ -4,7 +4,7 @@ import './MainContent.css'
 
 const MainContent = () => {
   return (
-    <div>MainContent</div>
+    <div className='MainContent' >MainContent</div>
   )
 }
 
