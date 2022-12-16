@@ -32,4 +32,22 @@
   width: 100%;
   background-color: var(--bg-Parallax);
   z-index: 8;
+}
+.Parallax .Hide {
+  display: block;
+}
+.Parallax .Hide2 {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .Parallax {
+    height: 100vh;
+  }
+  .Parallax .Hide {
+    display: none;
+  }
+  .Parallax .Hide2 {
+    display: block;
+  }
 }/*# sourceMappingURL=Parallax.css.map */

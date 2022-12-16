@@ -103,6 +103,18 @@ body #root .MobileNav {
   display: none;
 }
 
+@media (max-width: 991.98px) {
+  body #root .nav {
+    height: 5rem;
+  }
+  body #root .nav .Home {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  body #root .nav .Link {
+    font-size: 1.2rem;
+  }
+}
 @media (max-width: 767.98px) {
   body #root {
     overflow-x: hidden;
@@ -123,8 +135,8 @@ body #root .MobileNav {
   }
   body #root .nav .Toggle {
     display: block;
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
     margin-right: 2.5rem;
     cursor: pointer;
   }
