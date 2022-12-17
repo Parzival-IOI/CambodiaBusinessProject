@@ -1,12 +1,96 @@
 .MainContent {
   min-height: 120vh;
   width: 100%;
+  position: relative;
+  z-index: 1;
+  top: -0.1vw;
   background-color: var(--bg-Parallax);
 }
 .MainContent .close {
+  font-family: "Hind Siliguri";
+  font-weight: 500;
+  font-size: 1.5vw;
+  color: var(--bg-l2);
   opacity: 0;
-  transition: all 2s;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: opacity 5s, transform 2s, filter 4s;
 }
-.MainContent .close .open {
+.MainContent .close.open {
   opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.MainContent .close.open .ImgProfile {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.MainContent .close.open .text1 {
+  width: 60%;
+}
+.MainContent .close.open .text1 h4 {
+  font-size: calc(2vw + 0.5rem);
+  position: relative;
+}
+.MainContent .close.open .text1 h4::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10%;
+  background-color: var(--bg-l3);
+  bottom: 0;
+}
+.MainContent .close.open .text1 p {
+  font-size: calc(1vw + 0.5rem);
+  text-indent: 2vw;
+}
+
+@media (max-width: 767.98px) {
+  .MainContent .close {
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  .MainContent .close.open .ImgProfile {
+    width: 6rem;
+    height: 6rem;
+  }
+  .MainContent .close.open .text1 {
+    width: 100%;
+  }
+  .MainContent .close.open .text1 h4 {
+    font-size: 1.5rem;
+  }
+  .MainContent .close.open .text1 p {
+    font-size: 1.3rem;
+    text-indent: 1.2rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .MainContent .close {
+    width: 80%;
+    margin: 0 auto;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+  .MainContent .close.open .ImgProfile {
+    width: 6rem;
+    height: 6rem;
+  }
+  .MainContent .close.open .text1 {
+    width: 100%;
+  }
+  .MainContent .close.open .text1 h4 {
+    font-size: 1.4rem;
+  }
+  .MainContent .close.open .text1 p {
+    font-size: 1.2rem;
+    text-indent: 1rem;
+  }
 }/*# sourceMappingURL=MainContent.css.map */

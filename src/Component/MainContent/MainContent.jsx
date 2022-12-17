@@ -1,6 +1,7 @@
 import React from 'react'
 import './MainContent.css'
 import {useInView} from 'react-intersection-observer'
+import IntroSection from './EachSection/IntroSection'
 
 
 const MainContent = () => {
@@ -9,7 +10,8 @@ const MainContent = () => {
 
   return (
     <div className='MainContent' >
-      <div className={`${isIntersect ? "open" : 'close'}`} ref={Element} >Hello There How Are You Doing</div>
+      {/* <section className={`${isIntersect ? "close open" : 'close'}`} ref={Element} >Hello There How Are You Doing</section> */}
+      <IntroSection isIntersect={isIntersect} ref={Element} />
     </div>
   )
 }

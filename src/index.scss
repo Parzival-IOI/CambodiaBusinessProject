@@ -14,7 +14,10 @@
 
     --bg-Parallax: #0f1b33;
 }
-
+::selection {
+    background-color: var(--bg-d2);
+    color: var(--bg-d4);
+}
 body {
     width: 100%;
     min-height: 100vh;
