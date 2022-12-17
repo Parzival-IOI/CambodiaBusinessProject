@@ -1,24 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.7abf710e.css",
-    "main.js": "/Portfolio/static/js/main.90a0a6b4.js",
+    "main.css": "/Portfolio/static/css/main.ff7776c0.css",
+    "main.js": "/Portfolio/static/js/main.50507fe6.js",
     "static/media/MobileParallax.png": "/Portfolio/static/media/MobileParallax.ed0c5d08467211068207.png",
-    "static/media/BackRiff.png": "/Portfolio/static/media/BackRiff.9293522523af3166b91c.png",
-    "static/media/3Riff.png": "/Portfolio/static/media/3Riff.7addb1d70f769981883b.png",
     "static/media/1Riff.png": "/Portfolio/static/media/1Riff.b6ba8144bf93cb211bb0.png",
-    "static/media/2Riff.png": "/Portfolio/static/media/2Riff.f93f9bd3a40141606e48.png",
-    "static/media/Fish.png": "/Portfolio/static/media/Fish.6ff254edc0e902d1fa95.png",
-    "static/media/Turtle.png": "/Portfolio/static/media/Turtle.5918c80caf432b21e4f4.png",
-    "static/media/BFish.png": "/Portfolio/static/media/BFish.dfe6f2332acca0f7f495.png",
-    "static/media/AFish.png": "/Portfolio/static/media/AFish.3cb2613a228ab0c7cb08.png",
     "static/media/Profile.jpg": "/Portfolio/static/media/Profile.dd7bb5f239512a00bd99.jpg",
     "static/media/PH.png": "/Portfolio/static/media/PH.aabef365810681dff418.png",
     "index.html": "/Portfolio/index.html",
-    "main.7abf710e.css.map": "/Portfolio/static/css/main.7abf710e.css.map",
-    "main.90a0a6b4.js.map": "/Portfolio/static/js/main.90a0a6b4.js.map"
+    "main.ff7776c0.css.map": "/Portfolio/static/css/main.ff7776c0.css.map",
+    "main.50507fe6.js.map": "/Portfolio/static/js/main.50507fe6.js.map"
   },
   "entrypoints": [
-    "static/css/main.7abf710e.css",
-    "static/js/main.90a0a6b4.js"
+    "static/css/main.ff7776c0.css",
+    "static/js/main.50507fe6.js"
   ]
 }
