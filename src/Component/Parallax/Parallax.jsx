@@ -18,7 +18,7 @@ function Parallax() {
     return (
         <div
             className="Parallax"
-            style={{ height: `calc(130vh - (${position * 0.3}px))` }}
+            style={{ height: `calc(130vh - (${position * 0.4}px))` }}
         >
             <img src={PH} alt="P." className="img" style={{ "--i--n": "1" }} />
             <LazyLoadImage
@@ -28,14 +28,12 @@ function Parallax() {
                 style={{ "--i--n": "3"}}
             />
             <LazyLoadImage
-                className="img"
+                className="imgg"
                 src={Mobile}
                 style={{
                     "--i--n": "2",
-                    transform: `translateY(${position * 0.7}px)`,
+                    // transform: `translateY(${position * 0.7}px)`,
                 }}
-                placeholderSrc={PH}
-                effect="blur"
             />
             <div className="Fill" style={{ "--i--n": "4" }}></div>
         </div>
