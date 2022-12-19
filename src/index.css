@@ -112,6 +112,28 @@ body #root .BackDrop {
 body #root .MobileNav {
   display: none;
 }
+body #root .backToTop {
+  width: 3.5vw;
+  height: 3.5vw;
+  position: fixed;
+  bottom: 4vw;
+  right: 4vw;
+  z-index: 20;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--bg-l4);
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 1s, filter 800ms;
+}
+body #root .backToTop.B2 {
+  opacity: 1;
+  filter: blur(0);
+}
+body #root .backToTop .bi {
+  width: 60%;
+  height: 60%;
+}
 
 @media (max-width: 991.98px) {
   body #root .nav {
@@ -133,8 +155,8 @@ body #root .MobileNav {
     height: 4.5rem;
   }
   body #root .nav .Home {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-left: 1.5rem;
   }
   body #root .nav .Link {
@@ -201,5 +223,15 @@ body #root .MobileNav {
   body #root .MobileNav .SideBar .active {
     background-color: var(--bg-d4);
     color: var(--bg-d1);
+  }
+  body #root .backToTop {
+    width: 2rem;
+    height: 2rem;
+    bottom: 5.5vw;
+  }
+  body #root .backToTop .bi {
+    width: 80%;
+    height: 80%;
+    margin: auto auto;
   }
 }/*# sourceMappingURL=index.css.map */

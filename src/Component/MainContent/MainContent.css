@@ -14,10 +14,11 @@
   opacity: 0;
   filter: blur(10px);
   transform: translateX(-100%);
+  margin-bottom: 15vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  transition: opacity 5s, transform 2s, filter 4s;
+  transition: opacity 2.5s, transform 2s, filter 1.5s;
 }
 .MainContent .close.open {
   opacity: 1;
@@ -54,15 +55,15 @@
 @media (max-width: 767.98px) {
   .MainContent .close {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 8rem auto;
     gap: 2rem;
   }
   .MainContent .close.open .ImgProfile {
-    width: 6rem;
-    height: 6rem;
+    width: 6.5rem;
+    height: 6.5rem;
   }
   .MainContent .close.open .text1 {
-    width: 100%;
+    width: 60%;
   }
   .MainContent .close.open .text1 h4 {
     font-size: 1.5rem;
@@ -75,9 +76,10 @@
 @media (max-width: 575.98px) {
   .MainContent .close {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 6rem auto;
     flex-flow: column nowrap;
     align-items: flex-start;
+    justify-content: center;
   }
   .MainContent .close.open .ImgProfile {
     width: 6rem;
@@ -88,6 +90,7 @@
   }
   .MainContent .close.open .text1 h4 {
     font-size: 1.4rem;
+    margin-top: 0;
   }
   .MainContent .close.open .text1 p {
     font-size: 1.2rem;

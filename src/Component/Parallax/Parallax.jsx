@@ -32,7 +32,7 @@ function Parallax() {
                 src={Mobile}
                 style={{
                     "--i--n": "2",
-                    transform: `translateY(${position * 0.8}px)`,
+                    transform: `translateY(${position * 0.7}px)`,
                 }}
                 placeholderSrc={PH}
                 effect="blur"
