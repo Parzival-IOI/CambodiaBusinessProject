@@ -16,6 +16,7 @@
   top: 0;
   left: 0;
   z-index: var(--i--n);
+  transition: all 1ms cubic-bezier(0, 0, 1, 1);
 }
 .Parallax .imgg {
   width: 100%;

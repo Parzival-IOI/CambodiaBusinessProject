@@ -72,9 +72,9 @@ function Layout() {
     <>
         <nav className={NavChanges()} style={toggle ? {'backgroundColor' : 'transparent'} : null} ref={ref}>
             <NavLink to="/Portfolio/" className={`Home ${isActive => {return isActive ? 'active' : null}}`}><img src={Profile1} alt="Profile" width='100%' height='100%' loading='lazy'/></NavLink>
+            <NavLink to="/Portfolio/Programming" className='Link'>Programing</NavLink>
             <NavLink to='/Portfolio/About' className="Link">About</NavLink>
             <NavLink to="/Portfolio/Contact" className="Link">Contact</NavLink>
-            <NavLink to="/Portfolio/Programming" className='Link'>Programing</NavLink>
             {toggle ? 
             <div className='Toggle' onClick={DoToggle}>
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
@@ -92,9 +92,9 @@ function Layout() {
         <div className='MobileNav' style={toggle ? {'right' : '0vw'} : {'right' : '-80vw'}} id='slider'>
           <div className='SideBar'>
             <NavLink to='/Portfolio/' className="Link">Home</NavLink>
+            <NavLink to='/Portfolio/Programming' className="Link">Program</NavLink>
             <NavLink to='/Portfolio/About' className="Link">About</NavLink>
             <NavLink to="/Portfolio/Contact" className="Link">Contact</NavLink>
-            <NavLink to='/Portfolio/Programming' className="Link">Program</NavLink>
           </div>
         </div>
         <button onClick={BackToTop} className={position < 300 ? "backToTop" : "backToTop B2"}><svg xmlns="http://www.w3.org/2000/svg" /*width="16" height="16"*/ fill="currentColor" className="bi bi-caret-up-fill" viewBox="0 0 16 16"><path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/></svg></button>

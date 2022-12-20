@@ -13,7 +13,6 @@ function useScroll() {
         //Component Unmount
         return () => window.removeEventListener('scroll', UpdatePosition);
     }, []);
-
   return position;
 }
 export default useScroll;

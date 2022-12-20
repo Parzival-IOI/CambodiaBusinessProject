@@ -1,5 +1,5 @@
 .MainContent {
-    min-height: 120vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -13,7 +13,6 @@
         opacity: 0;
         filter: blur(10px);
         transform: translateX(-100%);
-        margin-bottom: 15vw;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -30,8 +29,7 @@
             }
             .text1 {
                 width: 60%;
-                h4 {
-                    font-size: calc(2vw + 0.5rem);
+                .Til {
                     position: relative;
                     &::before {
                         position: absolute;
@@ -39,7 +37,15 @@
                         width: 100%;
                         height: 10%;
                         background-color: var(--bg-l3);
+                        left: 0;
                         bottom: 0;
+                    }
+                    h4 {
+                        width: 30%;
+                        font-size: calc(2vw + 0.5rem);
+                        background: linear-gradient(to top right, #845EC2, #D65DB1, #DF362D, #FF4500,#FF8300, #FFC75F, #FF9671);
+                        background-clip: text;
+                        color: transparent;
                     }
                 }
                 p {
@@ -47,6 +53,19 @@
                     text-indent: 2vw;
                 }
             }
+            &:nth-child(2) {
+                margin-top: 15vw;
+                display: flex;
+                flex-flow: column nowrap;
+                h4 {
+                    text-align: center;
+                }
+                .Code {
+                    width: 70%;
+                    object-fit: cover;
+                }
+            }
+            
         }
     }
 }
@@ -63,12 +82,27 @@
                 }
                 .text1 {
                     width: 60%;
-                    h4 {
-                        font-size: 1.5rem;
+                    .Til {
+                        h4 {
+                            font-size: 1.5rem;
+                            width: 9rem;
+                        }
                     }
                     p {
                         font-size: 1.3rem;
                         text-indent: 1.2rem;
+                    }
+                }
+                &:nth-child(2) {
+                    margin: 15vw auto 0 auto;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    h4 {
+                        text-align: center;
+                    }
+                    .Code {
+                        width: 70%;
+                        object-fit: cover;
                     }
                 }
             }
@@ -91,7 +125,7 @@
                 }
                 .text1 {
                     width: 100%;
-                    h4 {
+                    .Til {
                         font-size: 1.4rem;
                         margin-top: 0;
                     }
