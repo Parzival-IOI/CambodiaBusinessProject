@@ -63,16 +63,54 @@
   display: flex;
   flex-flow: column nowrap;
 }
-.MainContent .close.open:nth-child(2) h4 {
-  text-align: center;
+.MainContent .close.open:nth-child(2) .Til2 {
+  width: 100%;
+  height: 5vw;
+  position: relative;
+  z-index: 1;
 }
-.MainContent .close.open:nth-child(2) .Code {
+.MainContent .close.open:nth-child(2) .Til2 .animateGradientColorBG {
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 13%, rgb(8, 32, 137) 22%, rgb(6, 87, 173) 36%, rgb(4, 138, 207) 49%, rgb(0, 212, 255) 66%, rgb(150, 229, 255) 93%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  width: 100%;
+  height: 100%;
+}
+.MainContent .close.open:nth-child(2) .Til2 .animateGradientColorBG h4 {
+  color: transparent;
+}
+.MainContent .close.open:nth-child(2) .perspective {
+  position: relative;
   width: 70%;
+  height: 40vw;
+  perspective: 90rem;
+  display: grid;
+  place-items: center;
+}
+.MainContent .close.open:nth-child(2) .perspective .Code {
+  width: 70%;
+  margin: 0 auto;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+}
+.MainContent .close.open:nth-child(2) .perspective .Code:first-child {
+  transform: rotateY(20deg) translateZ(-10vw) translateX(-15vw);
+  z-index: 1;
+}
+.MainContent .close.open:nth-child(2) .perspective .Code:nth-child(2) {
+  transform: rotateY(20deg) translateZ(0vw) translateX(2vw);
+  z-index: 2;
+}
+.MainContent .close.open:nth-child(2) .perspective .Code:nth-child(3) {
+  transform: rotateY(20deg) translateZ(10vw) translateX(20vw);
+  z-index: 3;
 }
 
 @media (max-width: 767.98px) {
+  .MainContent {
+    min-height: 100vh;
+  }
   .MainContent .close {
     width: 90%;
     margin: 0 auto 8rem auto;
@@ -97,14 +135,33 @@
     margin: 15vw auto 0 auto;
     display: flex;
     flex-flow: column nowrap;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
   }
   .MainContent .close.open:nth-child(2) h4 {
+    margin: 0;
     text-align: center;
   }
-  .MainContent .close.open:nth-child(2) .Code {
-    width: 70%;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .MainContent .close.open:nth-child(2) .perspective {
+    height: 70vw;
+  }
+  .MainContent .close.open:nth-child(2) .perspective .Code {
+    top: 4vw;
+    width: 100%;
+    position: absolute;
+  }
+  .MainContent .close.open:nth-child(2) .perspective .Code:first-child {
+    transform: rotateX(20deg) translateZ(-10rem) translateY(-20vw);
+    z-index: 1;
+  }
+  .MainContent .close.open:nth-child(2) .perspective .Code:nth-child(2) {
+    transform: rotateX(20deg) translateZ(-5rem) translateY(0vw);
+    z-index: 2;
+  }
+  .MainContent .close.open:nth-child(2) .perspective .Code:nth-child(3) {
+    transform: rotateX(20deg) translateZ(0rem) translateY(20vw);
+    z-index: 3;
   }
 }
 @media (max-width: 575.98px) {
@@ -129,5 +186,9 @@
   .MainContent .close.open .text1 p {
     font-size: 1.2rem;
     text-indent: 1rem;
+  }
+  .MainContent .close.open:nth-child(2) .perspective {
+    width: 95%;
+    height: 80vw;
   }
 }/*# sourceMappingURL=MainContent.css.map */

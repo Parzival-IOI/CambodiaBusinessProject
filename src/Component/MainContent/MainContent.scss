@@ -57,12 +57,50 @@
                 margin-top: 15vw;
                 display: flex;
                 flex-flow: column nowrap;
-                h4 {
-                    text-align: center;
+                .Til2 {
+                    width: 100%;
+                    height: 5vw;
+                    position: relative;
+                    z-index: 1;
+                    .animateGradientColorBG {
+                        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 13%, rgba(8,32,137,1) 22%, rgba(6,87,173,1) 36%, rgba(4,138,207,1) 49%, rgba(0,212,255,1) 66%, rgba(150,229,255,1) 93%); 
+                        background-clip: text;
+                        width: 100%;
+                        height: 100%;
+                        h4 {
+                            // position: absolute;
+                            // top: 0;
+                            // left: 0;
+                            color: transparent;
+                        }
+                    }
+                    
                 }
-                .Code {
+                .perspective {
+                    position: relative;
                     width: 70%;
-                    object-fit: cover;
+                    height: 40vw;
+                    perspective: 90rem;
+                    display: grid;
+                    place-items: center;
+                    .Code {
+                        width: 70%;
+                        margin: 0 auto;
+                        object-fit: cover;
+                        position: absolute;
+                        &:first-child {
+                            transform: rotateY(20deg) translateZ(-10vw) translateX(-15vw);
+                            z-index: 1;
+                        }
+                        &:nth-child(2) {
+                            transform: rotateY(20deg) translateZ(0vw) translateX(2vw);
+                            z-index: 2;
+                        }
+                        &:nth-child(3) {
+                            transform: rotateY(20deg) translateZ(10vw) translateX(20vw);
+                            z-index:3;
+                        }
+                    }
                 }
             }
             
@@ -71,6 +109,7 @@
 }
 @media (max-width: 767.98px) {
     .MainContent {
+        min-height: 100vh;
         .close {
             width: 90%;
             margin: 0 auto 8rem auto;
@@ -97,12 +136,32 @@
                     margin: 15vw auto 0 auto;
                     display: flex;
                     flex-flow: column nowrap;
+                    min-height: 50vh;
+                    justify-content: center;
+                    align-items: center;
                     h4 {
+                        margin: 0;
                         text-align: center;
                     }
-                    .Code {
-                        width: 70%;
-                        object-fit: cover;
+                    .perspective {
+                        height: 70vw;
+                        .Code {
+                            top: 4vw;
+                            width: 100%;
+                            position: absolute;
+                            &:first-child {
+                                transform: rotateX(20deg) translateZ(-10rem) translateY(-20vw);
+                                z-index: 1;
+                            }
+                            &:nth-child(2) {
+                                transform: rotateX(20deg) translateZ(-5rem) translateY(0vw);
+                                z-index: 2;
+                            }
+                            &:nth-child(3) {
+                                transform: rotateX(20deg) translateZ(0rem) translateY(20vw);
+                                z-index: 3;
+                            }
+                        }
                     }
                 }
             }
@@ -132,6 +191,12 @@
                     p {
                         font-size: 1.2rem;
                         text-indent: 1rem;
+                    }
+                }
+                &:nth-child(2) {
+                    .perspective {
+                        width: 95%;
+                        height: 80vw;
                     }
                 }
             }

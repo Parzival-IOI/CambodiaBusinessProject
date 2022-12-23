@@ -146,6 +146,10 @@ body #root .backToTop .bi {
   body #root .nav .Link {
     font-size: 1.2rem;
   }
+  body #root .backToTop {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 @media (max-width: 767.98px) {
   body #root {
@@ -225,13 +229,14 @@ body #root .backToTop .bi {
     color: var(--bg-d1);
   }
   body #root .backToTop {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     bottom: 5.5vw;
+    opacity: 0.2;
   }
   body #root .backToTop .bi {
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
     margin: auto auto;
   }
 }/*# sourceMappingURL=index.css.map */
