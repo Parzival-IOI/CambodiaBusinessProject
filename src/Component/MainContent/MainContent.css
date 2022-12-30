@@ -70,7 +70,7 @@
   z-index: 1;
 }
 .MainContent .close.open:nth-child(2) .Til2 .animateGradientColorBG {
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 13%, rgb(8, 32, 137) 22%, rgb(6, 87, 173) 36%, rgb(4, 138, 207) 49%, rgb(0, 212, 255) 66%, rgb(150, 229, 255) 93%);
+  background: linear-gradient(30deg, crimson, orange);
   -webkit-background-clip: text;
           background-clip: text;
   width: 100%;

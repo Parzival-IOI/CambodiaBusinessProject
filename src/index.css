@@ -113,6 +113,7 @@ body #root .MobileNav {
   display: none;
 }
 body #root .backToTop {
+  display: none;
   width: 3.5vw;
   height: 3.5vw;
   position: fixed;
@@ -122,13 +123,21 @@ body #root .backToTop {
   border-radius: 50%;
   border: none;
   background-color: var(--bg-l4);
-  opacity: 0;
-  filter: blur(10px);
   transition: opacity 1s, filter 800ms;
+  -webkit-animation-name: ToggleIn;
+          animation-name: ToggleIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  animation-direction: reverse;
 }
 body #root .backToTop.B2 {
-  opacity: 1;
-  filter: blur(0);
+  display: block;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
 }
 body #root .backToTop .bi {
   width: 60%;
@@ -238,5 +247,25 @@ body #root .backToTop .bi {
     width: 70%;
     height: 70%;
     margin: auto auto;
+  }
+}
+@-webkit-keyframes ToggleIn {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 0.6;
+    filter: blur(0);
+  }
+}
+@keyframes ToggleIn {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 0.6;
+    filter: blur(0);
   }
 }/*# sourceMappingURL=index.css.map */
